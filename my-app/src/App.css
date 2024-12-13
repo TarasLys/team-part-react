@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.modal {
+  width: 90%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-height: 90vh;
+}
+
+.modal-content {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: none;
+  font-size: 20px;
+  color: #007bff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: white;
+  background-color: #007bff;
+}
+
+h2,
+h3,
+h4 {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+.formulas {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.formulas p {
+  display: flex;
+  align-items: center;
+}
+
+.formulas .label {
+  color: black;
+  margin-right: 5px;
+}
+
+.formulas .formula {
+  color: #007bff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.label-input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+  accent-color: #007bff;
+}
+
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+textarea {
+  color: gray;
+  font-size: 12px;
+  background-color: white;
+  resize: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+textarea:read-only {
+  background-color: white;
+  cursor: not-allowed;
+}
+
+button {
+  width: 100px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Адаптация для телефонов и планшетов */
+@media (max-width: 768px) {
+  .modal {
+    width: 95%;
+    max-width: 100%;
+    height: 100vh;
+  }
+
+  .modal-content {
+    padding: 0 15px;
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  .formulas {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+
+  .radio-label {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .label-input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    align-self: center;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3,
+  h4 {
+    font-size: 1em;
+  }
+
+  label,
+  input[type="number"],
+  textarea {
+    font-size: 0.9em;
+  }
+
+  button {
+    width: 80px;
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  textarea {
+    font-size: 0.9em;
+  }
+}
+
+/* Адаптация для всех компьютеров и браузеров */
+@media (min-width: 769px) {
+  .modal {
+    width: 80%;
+    max-width: 100%;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  .formulas {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .radio-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .radio-label {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .label-input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    align-self: flex-end;
+  }
+}
+
+.blu {
+  color: #007bff;
+}
